@@ -1,0 +1,43 @@
+Name:          label
+Version:       0.1
+Author:        Sebastiaan Visser
+Synopsis:      First class data accessor labels.
+Description:   First class data accessor labels.
+
+Maintainer:         Sebastiaan Visser <code@fvisser.nl>
+Homepage:           https://github.com/sebastiaanvisser/label
+Bug-Reports:        https://github.com/sebastiaanvisser/label/issues
+License:            BSD3
+License-File:       LICENSE
+Category:           Lenses
+Cabal-Version:      >= 1.8
+Build-Type:         Simple
+-- Extra-Source-Files: CHANGELOG
+
+Library
+  HS-Source-Dirs: src
+
+  Other-Modules:
+    Label.Analyse
+    Label.Codegen
+  Exposed-Modules:
+    Label.Base
+    Label.Core
+    Label.Derive
+    Label.Monadic
+    Label.Mono
+    Label.Partial
+    Label.Pointwise
+    Label.Restricted
+    Label.Simple
+    Label.Total
+    Label.Test
+    Label.Traversing
+
+  GHC-Options: -Wall
+  Build-Depends:
+      base < 5
+    , template-haskell
+    , mtl    
+    , HUnit
+    , transformers
